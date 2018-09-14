@@ -1,6 +1,6 @@
 {
   "name": "pangnote-cities",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Cities of the world with a population of at least 1000 inhabitants, in a big JSON array, with country name, for Pangnote",
   "main": "index.js",
   "scripts": {
