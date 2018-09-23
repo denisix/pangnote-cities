@@ -39,9 +39,11 @@ module.exports = {
 		return require('./geo.json')[city];
 	},
 	getCountryISO: (country) => {
-		if (!country || country == '') return 'unknown country!';
+		if (!country || country == '') return 'unknown';
 		const iso = require('./iso.json');
-		return Object.keys(iso).filter(i => iso[i] == country); 
+		const res = Object.keys(iso).filter(i => iso[i] == country);
+		if (res.length > 0) return res[0];
+		return 'unknown'; 
 	},
 	getISOCountry: (iso) => {
 		if (!iso || iso == '') return 'unknown ISO!';
