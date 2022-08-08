@@ -1,16 +1,120 @@
-# pangnote-cities 
-Country & City Names, including coordinates (Lat, Lng) + country ISO name and full name
+# pangnote-cities
+Country & City Names, including GEO coordinates (Lat, Lng) + country ISO name and full name
 
-## Inspired by & thank you to:
-[Maroof Khan](https://www.npmjs.com/package/countries-cities)
+## API
+- getCountries() - get array of countries
 
-[Restcountries.eu](https://restcountries.eu/)
+```javascript
+const p = require('pangnote-cities')
+p.getCountries()
+/*
+[
+  ...,
+  {
+    name: {
+      common: 'Ukraine',
+      official: 'Ukraine',
+      native: { common: 'Україна', official: 'Україна' }
+    },
+    tld: [ '.ua', '.укр' ],
+    cca2: 'UA',
+    ccn3: '804',
+    cca3: 'UKR',
+    currency: [ 'UAH' ],
+    callingCode: [ '380' ],
+    capital: 'Kiev',
+    altSpellings: [ 'UA', 'Ukrayina' ],
+    relevance: '0',
+    region: 'Europe',
+    subregion: 'Eastern Europe',
+    nativeLanguage: 'ukr',
+    languages: { ukr: 'Ukrainian' },
+    translations: {
+      deu: 'Ukraine',
+      fra: 'Ukraine',
+      hrv: 'Ukrajina',
+      ita: 'Ucraina',
+      jpn: 'ウクライナ',
+      nld: 'Oekraïne',
+      por: 'Ucrânia',
+      rus: 'Украина',
+      spa: 'Ucrania'
+    },
+    latlng: [ 49, 32 ],
+    demonym: 'Ukrainian',
+    borders: [
+      'BLR', 'HUN',
+      'MDA', 'POL',
+      'ROU', 'RUS',
+      'SVK'
+    ],
+    area: 603500
+  },
+  ...
+]
+*/
+```
 
-## Example usage
+- getCountryNames() - get array of country names
 
-``` javascript
-var countries = require ('full-countries-cities').getCountries(); // Returns a full array of country information.
-var countriesNames = require ('full-countries-cities').getCountryNames(); // Returns a full array of only the country names.
-var cities = require ('full-countries-cities').getCities(country_name); // Returns an array of city names of the particular country.
-var regions = require ('full-countries-cities').getRegions(country_code); // Returns an array of region of the particular country.
-var asn = require ('full-countries-cities').getASNS(country_name); // Returns an array of ASN of the particular country.
+```javascript
+const p = require('pangnote-cities')
+p.getCountryNames()
+// [ 'Afghanistan', 'Åland Islands', 'Albania', 'Algeria', ...]
+```
+
+- getCities('Ukraine') - get city names of Ukraine
+
+```javascript
+const p = require('pangnote-cities')
+p.getCities('Ukraine')
+/*
+[
+  'Kyiv',
+  'Kharkiv',
+  'Odesa',
+  "L'viv",
+  'Adancata',
+  "Dnipropetrovs'k",
+  "Donets'k",
+  'Zaporizhzhya',
+  "Simferopol'",
+  "Luhans'k",
+  'Cherkasy',
+  "Ternopil'",
+  ...
+]
+*/
+```
+
+- getCountryGeo('Ukraine') - get country GEO location [lat, lng]
+
+```javascript
+const p = require('pangnote-cities')
+p.getCountryGeo('Ukraine')
+// [ 49, 32 ]
+```
+
+- getCityGeo('Ukraine', 'Kharkiv')- get city GEO location [lat, lng]
+
+```javascript
+const p = require('pangnote-cities')
+p.getCityGeo('Ukraine', 'Kharkiv')
+// [ 49.9808, 36.2527 ]
+```
+
+- getCountryISO('Ukraine') - get ISO code by country name: Ukraine -> UA
+
+```javascript
+const p = require('pangnote-cities')
+p.getCountryISO('Ukraine')
+// 'UA'
+```
+
+- getISOCountry('UA') - get country name by ISO code: UA -> Ukraine
+
+```javascript
+const p = require('pangnote-cities')
+p.getISOCountry('UA')
+// 'Ukraine'
+```

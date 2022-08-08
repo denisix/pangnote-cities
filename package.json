@@ -1,8 +1,29 @@
 {
-  "deprecated": false,
-  "description": "Country & City Names, including coordinates (Lat, Lng) + country ISO name and full name",
-  "license": "MIT",
-  "main": "main.js",
   "name": "pangnote-cities",
-  "version": "0.0.7"
+  "description": "Country & City Names, including coordinates (Lat, Lng) + country ISO name and full name",
+  "version": "0.0.8",
+  "main": "main.js",
+  "repository": "git@github.com:denisix/pangnote-cities.git",
+  "scripts": {
+    "test": "node test"
+  },
+  "deprecated": false,
+  "keywords": [
+    "country",
+    "city",
+    "countries",
+    "cities",
+    "country iso",
+    "iso country",
+    "iso city",
+    "cities by country",
+    "country cities",
+    "list cities",
+    "full city list",
+    "full country list",
+    "getCountry",
+    "getCity"
+  ],
+  "author": "denisix",
+  "license": "MIT"
 }
