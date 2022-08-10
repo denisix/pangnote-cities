@@ -1,7 +1,7 @@
 {
   "name": "pangnote-cities",
   "description": "Country & City Names, including coordinates (Lat, Lng) + country ISO name and full name",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "main": "main.js",
   "repository": "git@github.com:denisix/pangnote-cities.git",
   "scripts": {
