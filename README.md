@@ -1,5 +1,13 @@
-# pangnote-cities
-Country & City Names, including GEO coordinates (Lat, Lng) + country ISO name and full name
+# countries-cities-geo
+
+Countries & City Names, including GEO coordinates (Lat, Lng) + country ISO name and full name
+Completely rewrote from old package name called pangnote-cities, now have the following:
+
+- 250 countries
+- >17k cities (big cities), you can get list of cities using getCities(country_name)
+- each country have detailed information (common & native names, sub/region, capital, currency, tld, etc)
+- GEO locations for each country & city
+- convert country name to ISO code & back
 
 ## API
 - getCountries() - get array of countries
